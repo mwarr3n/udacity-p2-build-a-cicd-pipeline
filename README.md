@@ -5,10 +5,9 @@
 <TODO: complete this with an overview of your project>
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project: [Trello Board](https://trello.com/b/FHIB0W1R/project-2-building-a-ci-cd-pipeline)
+* A link to a spreadsheet that includes the original and final project plan: [Project Plan]()
 
 ## Instructions
 
@@ -41,6 +40,31 @@ Port: 443
 * Output of streamed log files from deployed application
 
 > 
+
+## Load Test
+Load test application using locust
+
+Install Locust
+```
+pip install locust
+```
+
+Run app
+```
+python app.py
+```
+
+Open a new terminal and start locust
+```
+locust
+```
+
+Open a browser and go to http://localhost:8089. Enter the total number of users to simulate, spawn rate, set the host to http://localhost:5000.  click Start Swarming to begin load test. See the following image for values used in the test:
+
+![locust-start.png](img/locust-start.png)
+
+Locust Results:
+![locust-finished.png](img/locust-finished.png)
 
 ## Enhancements
 
