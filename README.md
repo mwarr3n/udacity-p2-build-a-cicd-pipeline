@@ -4,6 +4,11 @@
 
 <TODO: complete this with an overview of your project>
 
+This project contains a python application which predicts housing prices in Boston. Using this guide you will be able to perform the following:
+* Use Azure cloud shell to run the application
+* Deploy the app as an Azure App Service
+* Load test the application using [Locust](https://locust.io/)
+
 ## Project Plan
 
 * A link to a Trello board for the project: [Trello Board](https://trello.com/b/FHIB0W1R/project-2-building-a-ci-cd-pipeline)
@@ -59,7 +64,7 @@ Open a new terminal and start locust
 locust
 ```
 
-Open a browser and go to http://localhost:8089. Enter the total number of users to simulate, spawn rate, set the host to http://localhost:5000.  click Start Swarming to begin load test. See the following image for values used in the test:
+Open a browser and go to http://localhost:8089. Enter the total number of users to simulate, spawn rate and set the host to http://localhost:5000.  click Start Swarming to begin load test. See the following image for values used in the test:
 
 ![locust-start.png](img/locust-start.png)
 
