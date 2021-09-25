@@ -6,7 +6,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -v --pythonwarnings ignore::DeprecationWarning tests/ 
+	python -m pytest -vv --pythonwarnings ignore::DeprecationWarning tests/ 
 
 lint:
 	#hadolint Dockerfile #uncomment to explore linting Dockerfiles
