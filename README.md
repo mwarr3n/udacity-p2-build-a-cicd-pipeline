@@ -1,20 +1,97 @@
 [![Python application test with Github Actions](https://github.com/mwarr3n/udacity-p2-build-a-cicd-pipeline/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/mwarr3n/udacity-p2-build-a-cicd-pipeline/actions/workflows/pythonapp.yml)
 
 # Overview
+This project will demonstrate Continuous Integration and Continuous Delivery for a Python-based machine learning application using the Flask web framework. Automated code testing has been implemented using GitHub Actions. An Azure DevOps pipeline has been created to test and deploy to a Azure App Service.
 
-<TODO: complete this with an overview of your project>
-
-This project contains a python application which predicts housing prices in Boston. Using this guide you will be able to perform the following:
-* Use Azure cloud shell to run the application
-* Deploy the app as an Azure App Service
+Using this guide you will be able to perform the following:
+* Use Azure Cloud Shell to run the application
+* Deploy the application as an Azure App Service
 * Load test the application using [Locust](https://locust.io/)
+
+<TODO: Architecture diagram here>
+
+The application predicts housing prices in Boston using a pre-trained sklearn model.
+```
+    Input:
+    {
+        "CHAS":{
+            "0":0
+        },
+        "RM":{
+            "0":6.575
+        },
+        "TAX":{
+            "0":296.0
+        },
+        "PTRATIO":{
+            "0":15.3
+        },
+        "B":{
+            "0":396.9
+        },
+        "LSTAT":{
+            "0":4.98
+        }
+    }
+
+    result:
+    { "prediction": [ 20.35373177134412 ] }
+```
 
 ## Project Plan
 
 * A link to a Trello board for the project: [Trello Board](https://trello.com/b/FHIB0W1R/project-2-building-a-ci-cd-pipeline)
 * A link to a spreadsheet that includes the original and final project plan: [Project Plan]()
 
-## Instructions
+# Instructions
+## Azure Cloud Shell
+
+Clone the repo in Azure Cloud Shell:
+```
+git clone git@github.com:mwarr3n/udacity-p2-build-a-cicd-pipeline.git
+```
+![git-clone.png](img/git-clone.png)
+
+Go to this folder:
+```
+cd udacity-p2-build-a-cicd-pipeline
+```
+
+Create environment:
+```
+make setup
+```
+
+Activate the environment:
+```
+source ~/.udacity-devops/bin/activate
+```
+
+Install dependencies in the virtual environment and run tests:
+```
+make all
+```
+Output:
+![make-all.png](img/make-all.png)
+
+Start the application:
+```
+python app.py
+```
+![app-running.png](img/app-running.png)
+
+Open a new cloud shell and use the following run the application:
+```
+cd udacity-p2-build-a-cicd-pipeline
+./make_prediction.sh
+```
+
+You should see the following output:
+![app-prediction.png](img/app-prediction.png)
+
+
+
+
 
 <TODO:  
 * Architectural Diagram (Shows how key parts of the system work)>
