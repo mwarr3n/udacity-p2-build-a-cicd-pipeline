@@ -1,10 +1,4 @@
 
-cd ~
-
-git clone git@github.com:mwarr3n/udacity-p2-build-a-cicd-pipeline.git
-
-cd udacity-p2-build-a-cicd-pipeline
-
 make setup
 
 source ~/.udacity-devops/bin/activate
