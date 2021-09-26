@@ -1,15 +1,20 @@
 [![Python application test with Github Actions](https://github.com/mwarr3n/udacity-p2-build-a-cicd-pipeline/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/mwarr3n/udacity-p2-build-a-cicd-pipeline/actions/workflows/pythonapp.yml)
 
 # Overview
-This project will demonstrate Continuous Integration and Continuous Delivery for a Python-based machine learning application using the Flask web framework. Automated code testing has been implemented using GitHub Actions. An Azure DevOps pipeline has been created to test and deploy to a Azure App Service.
+
+
+
+This project will demonstrate Continuous Integration and Continuous Delivery for a Python-based machine learning application using the Flask web framework. Automated code testing has been implemented using GitHub Actions. An Azure DevOps pipeline has been created to test and deploy to an Azure App Service.
 
 Using this guide you will be able to perform the following:
 * Use Azure Cloud Shell to run the application
 * Deploy the application as an Azure App Service
 * Load test the application using [Locust](https://locust.io/)
 
-<TODO: Architecture diagram here>
+## Architectural Diagram
+![diagram.png](img/diagram.png)
 
+### Application Input and Expected Outputs
 The application predicts housing prices in Boston using a pre-trained sklearn model.
 ```
     Input:
@@ -38,10 +43,13 @@ The application predicts housing prices in Boston using a pre-trained sklearn mo
     { "prediction": [ 20.35373177134412 ] }
 ```
 
+
+
 ## Project Plan
 
 * A link to a Trello board for the project: [Trello Board](https://trello.com/b/FHIB0W1R/project-2-building-a-ci-cd-pipeline)
 * A link to a spreadsheet that includes the original and final project plan: [Project Plan]()
+<TODO: spreadsheet>
 
 # Instructions
 ## Azure Cloud Shell
