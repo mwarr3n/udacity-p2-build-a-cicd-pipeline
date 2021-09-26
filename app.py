@@ -20,7 +20,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = "<h3>Sklearn Prediction Home</h3>"
+    html = "<h3>Sklearn Prediction Home Project 2</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value
@@ -50,7 +50,7 @@ def predict():
     }
 
     result looks like:
-    { "prediction": [ 20.35373177134412 ] }
+    { "Prediction": [ 20.35373177134412 ] }
 
     """
 
