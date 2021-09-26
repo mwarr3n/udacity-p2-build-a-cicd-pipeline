@@ -2,19 +2,18 @@
 
 # Overview
 
-
-
-This project will demonstrate Continuous Integration and Continuous Delivery for a Python-based machine learning application using the Flask web framework. Automated code testing has been implemented using GitHub Actions. An Azure DevOps pipeline has been created to test and deploy to an Azure App Service.
+This project will demonstrate Continuous Integration and Continuous Delivery (CI/CD) for a Python-based machine learning application using the Flask web framework. Automated code testing has been implemented using GitHub Actions. An Azure DevOps pipeline has been created to test and deploy to an Azure App Service.
 
 Using this guide you will be able to perform the following:
 * Use Azure Cloud Shell to run the application
 * Deploy the application as an Azure App Service
+* Setup an Azure Pipeline
 * Load test the application using [Locust](https://locust.io/)
 
 ## Architectural Diagram
 ![diagram.png](img/diagram.png)
 
-### Application Input and Expected Outputs
+## Application Input and Expected Outputs
 The application predicts housing prices in Boston using a pre-trained sklearn model.
 ```
     Input:
@@ -42,8 +41,6 @@ The application predicts housing prices in Boston using a pre-trained sklearn mo
     result:
     { "prediction": [ 20.35373177134412 ] }
 ```
-
-
 
 ## Project Plan
 
@@ -143,10 +140,10 @@ Lets create the pipeline in Azure DevOps. Use this guide for detailed instructio
 Summary of process:
 * Go to https://dev.azure.com
 * Create a new private project.
-* From the project page selec Project Settings
+* From the project page select Project Settings.
 * Under Project Settings create a new service connection using Azure Resource Manager.
 * Configure the Azure Resource Manager scoped to your subscription and resource group.
-* Create a new pipeline linked to your GitHub repo
+* Create a new pipeline linked to your GitHub repo.
 
 ![pipeline-build.png](img/pipeline-build.png)
 
@@ -176,8 +173,7 @@ Locust Results:
 ![locust-finished.png](img/locust-finished.png)
 
 ## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
+Modify the pipeline to only trigger based on an approved pull request.
 
 ## Demo 
 
