@@ -101,26 +101,28 @@ You should see the following output:
 ## Azure App Service
 Lets deploy the application using Azure App Services.
 
-Open Azure Cloud Shell and navigate to the cloned project.
+Open Azure Cloud Shell and navigate to the cloned project:
 ```
 cd udacity-p2-build-a-cicd-pipeline
 ```
 
-Deploy the app to Azure App service. The following command deploys the code to a app service called udacity-project2-wa using resource group udacity-project2-rg.
+The following command deploys the code to an app service called udacity-project2-wa using resource group udacity-project2-rg.
 ```
 az webapp up -n udacity-project2-wa -g udacity-project2-rg --sku F1
 ```
 ![app-service.png](img/app-service.png)
 
+
+App Service in Azure:
 ![azure-app-service.png](img/azure-app-service.png)
 
 
 Check state of newly created app service by opening a web browser and navigating to http://udacity-project2-wa.azurewebsites.net.
 ![app-service-output.png](img/app-service-output.png)
 
-Test the app bexecuting the following command in clous shell. 
+Test the app by executing the following command in cloud shell. 
 Note: Before executing, verify the url on line 28 of make_predict_azure_app.sh matches the url of your app service. 
-In clou shell, You can use the following to execute the newly deployed app service:
+In cloud shell, You can use the following to execute the newly deployed app service:
 ```
 ./make_predict_azure_app.sh
 ```
@@ -130,31 +132,38 @@ You can use the following to view a stream of the deployed apps logs:
 ```
 az webapp log tail -n udacity-project2-wa -g udacity-project2-rg
 ```
+
 ![log-stream.png](img/log-stream.png)
 
+## Azure DevOps Pipeline
+Lets create the pipeline in Azure DevOps. Use this guide for detailed instructions:
 
+[Use CI/CD to deploy a Python web app to Azure App Service on Linux](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
 
-<TODO: 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+Summary of process:
+* Go to https://dev.azure.com
+* Create a new private project.
+* From the project page selec Project Settings
+* Under Project Settings create a new service connection using Azure Resource Manager.
+* Configure the Azure Resource Manager scoped to your subscription and resource group.
+* Create a new pipeline linked to your GitHub repo
 
-* Running Azure App Service from Azure Pipelines automatic deployment
->
-
+![pipeline-build.png](img/pipeline-build.png)
 
 ## Load Test
-Load test application using locust
+Load test application using locust.
 
-Install Locust
+Install Locust:
 ```
 pip install locust
 ```
 
-Run app
+Run app:
 ```
 python app.py
 ```
 
-Open a new terminal and start locust
+Open a new terminal and start locust:
 ```
 locust
 ```
