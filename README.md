@@ -45,8 +45,7 @@ The application predicts housing prices in Boston using a pre-trained sklearn mo
 ## Project Plan
 
 * A link to a Trello board for the project: [Trello Board](https://trello.com/b/FHIB0W1R/project-2-building-a-ci-cd-pipeline)
-* A link to a spreadsheet that includes the original and final project plan: [Project Plan]()
-<TODO: spreadsheet>
+* A link to a spreadsheet that includes the original and final project plan: [Project Plan](project-management.xlsx)
 
 # Instructions
 ## Azure Cloud Shell
