@@ -118,7 +118,7 @@ Check state of newly created app service by opening a web browser and navigating
 
 Test the app by executing the following command in cloud shell. 
 Note: Before executing, verify the url on line 28 of make_predict_azure_app.sh matches the url of your app service. 
-In cloud shell, You can use the following to execute the newly deployed app service:
+In cloud shell, you can use the following to execute the newly deployed app service:
 ```
 ./make_predict_azure_app.sh
 ```
@@ -138,11 +138,11 @@ Lets create the pipeline in Azure DevOps. Use this guide for detailed instructio
 
 Summary of process:
 * Go to https://dev.azure.com
-* Create a new private project.
-* From the project page select Project Settings.
-* Under Project Settings create a new service connection using Azure Resource Manager.
-* Configure the Azure Resource Manager scoped to your subscription and resource group.
-* Create a new pipeline linked to your GitHub repo.
+* Create a new private project
+* From the project page select Project Settings
+* Under Project Settings create a new service connection using Azure Resource Manager
+* Configure the Azure Resource Manager scoped to your subscription and resource group
+* Create a new pipeline linked to your GitHub repo
 
 ![pipeline-build.png](img/pipeline-build.png)
 
@@ -164,7 +164,7 @@ Open a new terminal and start locust:
 locust
 ```
 
-Open a browser and go to http://localhost:8089. Enter the total number of users to simulate, spawn rate and set the host to http://localhost:5000.  click Start Swarming to begin load test. See the following image for values used in the test:
+Open a browser and go to http://localhost:8089. Enter the total number of users to simulate, spawn rate and set the host to http://localhost:5000.  Click Start Swarming to begin load test. See the following image for values used in the test:
 
 ![locust-start.png](img/locust-start.png)
 
