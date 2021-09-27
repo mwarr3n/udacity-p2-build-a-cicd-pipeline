@@ -179,3 +179,18 @@ Modify the pipeline to only trigger based on an approved pull request.
 [Demo Video](https://youtu.be/N-ZdQ2kV6Fk)
 
 
+The following screenshots shows a successful build via GitHub actions and a deployment using our pipeline. The process that initiated these actions can viewed in the demo video. Please refer to the demo video starting at 3m:20s.
+
+### Github Actions
+![github-actions.png](img/github-actions.png)
+
+### Pipeline Summary
+![pipeline-summary.png](img/pipeline-summary.png)
+
+### Pipeline Details
+![pipeline-details.png](img/pipeline-details.png)
+
+
+
+
+
