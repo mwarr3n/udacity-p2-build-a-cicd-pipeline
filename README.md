@@ -179,7 +179,7 @@ Modify the pipeline to only trigger based on an approved pull request.
 [Demo Video](https://youtu.be/N-ZdQ2kV6Fk)
 
 
-The following screenshots demonstrate a successful build via GitHub actions and a deployment using our pipeline. The process that initiated these actions can be viewed in the demo video. Please refer to the demo video starting at timestamp 3m:20s.
+The following screenshots demonstrate a successful build via GitHub Actions and a deployment using Azure Pipelines. The process that initiated these actions can be viewed in the demo video. Please refer to the demo video starting at timestamp 3m:20s.
 
 ### Github Actions
 ![github-actions.png](img/github-actions.png)
