@@ -6,7 +6,7 @@ class WebsiteTestUser(HttpUser):
 
     @task(1)
     def test1(self):
-        self.client.get("http://localhost:5000")
+        self.client.get("/")
 
     @task(2)
     def test2(self):
@@ -14,4 +14,4 @@ class WebsiteTestUser(HttpUser):
 
         headers = {'content-type': 'application/json'}
 
-        self.client.post("http://localhost:5000/predict", json=payload, headers=headers)
+        self.client.post("/predict", json=payload, headers=headers)
